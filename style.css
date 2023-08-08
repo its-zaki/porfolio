@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 :root{
      --blue:  #0089b7;
@@ -21,10 +22,17 @@
     position: relative;
 }
 
-.nav-h1{
+.nav-h1, a{
     color: #ffffff;
     cursor: pointer;
+    text-decoration: none;
     
+}.nav-h1:hover{
+    color: var(--darkblue);
+    text-shadow:0px 0px 25px var(--black);
+    transition: .4s;
+    transform: translateX();
+
 }
 .header{
     width: 100%;
@@ -45,9 +53,11 @@
     font-size: 3vh;
     
 }
-a:hover{
+.a-1:hover{
     color: var(--darkblue);
-    text-decoration: underline;
+    text-shadow:0px 0px 25px var(--darkblue);
+    transition: .4s;
+    transform: translateX();
 }
 .nav-ul{
     display: flex;
@@ -90,9 +100,9 @@ a:hover{
 
 }
 .left-img{
-    width: 50vw;
+    width: 500px;
     /* border: 2px solid red; */
-    margin-top: 8vh;
+    margin-top: 7vh;
     height: 500px;
 }
 .right{
@@ -114,6 +124,7 @@ a:hover{
     letter-spacing: 2px;
 
 }
+
 @media (max-width:600) {
     .content{
         display: flex;
@@ -123,6 +134,116 @@ a:hover{
         
     }
     
+}.hr{
+    color: var(--blue);
+    
+    border: 2px solid var(--blue);
+}
+/* project section start  */
+.projects-section{
+    background-color:var(--deepblue);
+    width: 100%;
+    height: 100%;
+}
+.project-h1{
+    color: var(--white);
+    text-align: center;
+    padding-top: 20px;
+}
+.project-h1:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+.image{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.9;
+    border-radius: 5%;
+    
+}
+.img img:hover{
+    box-shadow: 0px 0px 10px 10px var(--blue);
+    transition: .5s;
+    transform: translateY(15px);
+
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.hr-2{
+    color: var(--blue);
+    margin-top: 40px;
+    border: 2px solid var(--blue);
+}
+/* project section end  */
+/* about-section start  */
+.about-section{
+    background-color: var(--darkblue);
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    padding-bottom: 60px;
+    
+}
+.about-h1:hover{
+    color: var(--white);
+    text-shadow:0px 0px 35px var(--black);
+    transition: .4s;
+    transform: translateX();
+    cursor:pointer;
+
+
+}
+.about-h1 {
+    color: var(--white);
+    text-align: center;
+    padding-top: 70px;
+    font-size: 4vw;
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+}
+.icon-1{
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.icon-1>i{
+    padding-top: 6px;
+}
+.social-a{
+    text-decoration: none;
+}
+.social-a:hover{
+    color: var(--blue);
 }
 
+/* about-section end  */
+
 /* main end  */
+/* footer start */
+.footer{
+    width: 100%;
+    height: 100%;
+    background-color: var(--deepblue);
+}
+.footer-h1{
+    text-align: center;
+    font-size:4vh;
+    color: var(--white);
+    padding-top: 20px ;
+    padding-bottom: 20px ;
+}
+.name{
+    font-size: 4vh;
+}
+.name:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+/* footer end */
